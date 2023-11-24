@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    min-width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+
+
+hr {
+    height: 1px;
+    background-color: #d1d1d1;
+}
+
+
+label {
+    padding: 2px;
+}
+
+.stickynavigation {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* TOP */
+.webservices {
+    position: relative;
+    background-color: #6200ee;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+}
+.webservices h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* TOOLS */
+.tools {
+    background-color: #e4e4e4;
+    display: flex;
+    padding: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* PAPER SIZE */
+.SizeandBorder {
+    min-width: 40%;
+    height: auto;
+    margin-right: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+}
+
+
+/* TOOLS BACKGROUND COLOR*/
+
+.BGColor {
+    width: 30%;
+    height: auto;
+    margin-right: 10px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+}
+
+.titlebgcolorPicker,
+.keywordbgcolorPicker,
+.contentbgcolorPicker,
+.summarybgcolorPicker {
+    width: 40px;
+    height: 25px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+/* TOOLS TEXT COLOR*/
+.TColor {
+    width: 30%;
+    height: auto;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+}
+
+.titletextcolorPicker,
+.keywordtextcolorPicker,
+.contenttextcolorPicker,
+.summarytextcolorPicker {
+    width: 40px;
+    height: 25px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+
+
+.documents {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+/* CORNELL NOTE DOC */
+.cornellnotesdoc {
+    background-color: white;
+    padding: 0.5in;
+    margin: 20px;
+    border: solid 1px #ccc;
+}
+
+
+
+
+/* head */
+.head {
+    display: flex;
+}
+
+
+.title {
+    background-color: #FBF0B2;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    min-height: 100px;
+    margin: 5px;
+    padding: 5px; 
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+
+}
+.dynamictitle {
+    text-align: center;
+}
+.notetitle {
+    background-color: #ffffff;
+    text-align: center;
+    border: 1px solid #d1d1d1;
+    padding: 3px;
+}
+
+
+
+
+/* con */
+.con {
+    display: flex;
+}
+
+
+.keyword {
+    background-color: #D8B4F8;
+    position: relative;
+    flex: 1;
+    height: auto;
+    min-height: 500px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+}
+.dynamickeyword{
+    text-align: center;
+}
+.notekeyword {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    padding: 3px;
+}
+
+
+
+.content {
+    background-color: #FFC7EA;
+    position: relative;
+    flex: 3;
+    height: auto;
+    min-height: 500px;
+    margin: 5px; 
+    padding: 5px; 
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+}
+.dynamiccontent {
+    text-align: center;
+}
+.notecontent {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    padding: 3px;
+}
+
+
+
+/* but */
+.but {
+    display: flex;
+}
+
+.summary {
+    background-color: #CAEDFF;
+    position: relative;
+    height: 15%;
+    min-height: 250px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #d1d1d1; 
+    border-radius: 8px;
+}
+.dynamicsummary {
+    text-align: center;
+}
+.notesummary {
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    padding: 3px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Cornell Note</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/cornellnotestyle.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/searchandhighlightstyle.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/savebuttonstyle.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/downloadbuttonstyle.css') }}">
+        <script src="{{ url_for('static', filename='js/html2canvas.min.js') }}"></script>
+    </head>
+
+    <body>
+    
+    <nav class="stickynavigation">
+
+        <header class="webservices">
+            <h1>Cornell Note</h1>
+            <div class="search">
+                <input type="text" id="searchInput" oninput="searchAndHighlight()" placeholder="Search...">
+                <button id="saveButton" onclick="saveData()">Save Data</button>
+                <button id="downloadButton" onclick="downloadImage()">Download</button>
+            </div>
+        
+        </header>
+
+        <div class="tools">
+            <div class="SizeandBorder">
+            <label>Paper Size:</label>
+
+            <select class="paperSize" title="Paper Size">
+                <option value="Letter">Letter (8.5" x 11")</option>
+                <option value="Long">Long (8.5" x 13")</option>
+                <option value="Tabloid">Tabloid (11" x 17")</option>
+                <option value="Legal">Legal (8.5" x 14")</option>
+                <option value="Executive">Executive (7.25" x 10.5")</option>
+                <option value="A3">A3 (11.69" x 16.54")</option>
+                <option value="A4">A4 (8.27" x 11.69")</option>
+                <option value="B4JIS">B4 (JIS) (10.12" x 14.33")</option>
+                <option value="B5JIS">B5 (JIS) (7.17" x 10.12")</option>
+            </select>
+
+            <br>
+            <br>
+            <label>Border Style:</label>
+            <select class="borderDesign" title="Border Style">
+                <option value="solid">Solid</option>
+                <option value="dotted">Dotted</option>
+                <option value="dashed">Dashed</option>
+                <option value="none">None</option>
+            </select>
+            
+            </div>
+
+            <div class="BGColor">
+            <label>Background Color:</label>
+                <br>
+                <center>
+                <input type="color" class="titlebgcolorPicker" name="titlefvcolor" value="#FBF0B2" title="Title Background Color">
+                <input type="color" class="keywordbgcolorPicker" name="keywordfvcolor" value="#D8B4F8" title="Keyword Background Color">
+                <input type="color" class="contentbgcolorPicker" name="contentfvcolor" value="#FFC7EA" title="Content Background Color">
+                <input type="color" class="summarybgcolorPicker" name="contentfvcolor" value="#CAEDFF" title="Summary Background Color">
+                </center>
+            </div>
+            
+
+            <div class="TColor">
+            <label>Text Color:</label>
+                <br>
+                <center>
+                <input type="color" class="titletextcolorPicker" title="Title Text Color">
+                <input type="color" class="keywordtextcolorPicker" title="Keyword Text Color">
+                <input type="color" class="contenttextcolorPicker" title="Content Text Color">
+                <input type="color" class="summarytextcolorPicker" title="Summary Text Color">
+                </center>
+            </div>
+            
+
+        </div>
+    </nav>
+
+        <div class="documents">
+            <main class="cornellnotesdoc">
+
+                <div class="head">            
+                    <nav class="title">
+                        <h4 class="dynamictitle" contentEditable="true" title="Click here to change!">TITLE</h4>
+                        <p class="notetitle" contentEditable="true" title="Click here to change!">{{ title }}</p>
+                    </nav>
+                </div>
+            
+                <div class="con">
+                    <aside class="keyword">
+                        <h4 class="dynamickeyword" contentEditable="true" title="Click here to change!">KEYWORD</h4>
+                        <p class="notekeyword" contentEditable="true" title="Click here to change!">{{ keyword }}</p>
+                    </aside>
+            
+                    <article class="content">
+                        <h4 class="dynamiccontent" contentEditable="true" title="Click here to change!">CONTENT</h4>
+                        <p class="notecontent" contentEditable="true" title="Click here to change!">{{ content }}</p>
+                    </article>
+                </div>
+    
+                <div class="buttom">
+                    <summary class="summary">
+                        <h4 class="dynamicsummary" contentEditable="true" title="Click here to change!">SUMMARY</h4>
+                        <p class="notesummary" contentEditable="true" title="Click here to change!">{{ summary }}</p>
+                    </summary>
+                </div>
+    
+                
+            </main>
+                
+        </div>
+
+        <script src="{{ url_for('static', filename='js/backgroundcolor.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/borderdesign.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/papersize.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/textcolor.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/searchandhighlight.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/savedata.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/downloadImage.js') }}"></script>
+    </body>
+
+</html>
