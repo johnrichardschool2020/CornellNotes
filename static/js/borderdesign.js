@@ -23,10 +23,10 @@ function applyBorderDesign(borderDesign) {
     const summary = document.querySelector(".summary");
 
     // Reset the border to default style and color
-    title.style.border = "2px solid black";
-    keyword.style.border = "2px solid black";
-    content.style.border = "2px solid black";
-    summary.style.border = "2px solid black";
+    title.style.border = "3px solid black";
+    keyword.style.border = "3px solid black";
+    content.style.border = "3px solid black";
+    summary.style.border = "3px solid black";
 
     switch (borderDesign) {
         case "solid":
@@ -46,6 +46,36 @@ function applyBorderDesign(borderDesign) {
             keyword.style.borderStyle = "dashed";
             content.style.borderStyle = "dashed";
             summary.style.borderStyle = "dashed";
+            break;
+        case "double":
+            title.style.borderStyle = "double";
+            keyword.style.borderStyle = "double";
+            content.style.borderStyle = "double";
+            summary.style.borderStyle = "double";
+            break;
+        case "groove":
+            title.style.borderStyle = "groove";
+            keyword.style.borderStyle = "groove";
+            content.style.borderStyle = "groove";
+            summary.style.borderStyle = "groove";
+            break;
+        case "ridge":
+            title.style.borderStyle = "ridge";
+            keyword.style.borderStyle = "ridge";
+            content.style.borderStyle = "ridge";
+            summary.style.borderStyle = "ridge";
+            break;
+        case "inset":
+            title.style.borderStyle = "inset";
+            keyword.style.borderStyle = "inset";
+            content.style.borderStyle = "inset";
+            summary.style.borderStyle = "inset";
+            break;
+        case "outset":
+            title.style.borderStyle = "outset";
+            keyword.style.borderStyle = "outset";
+            content.style.borderStyle = "outset";
+            summary.style.borderStyle = "outset";
             break;
         case "none":
             title.style.borderStyle = "none";

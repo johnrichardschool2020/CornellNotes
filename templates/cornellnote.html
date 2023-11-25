@@ -9,6 +9,8 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/searchandhighlightstyle.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/savebuttonstyle.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/downloadbuttonstyle.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/toolbarstyle.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/documentstyle.css') }}">
         <script src="{{ url_for('static', filename='js/html2canvas.min.js') }}"></script>
     </head>
 
@@ -53,6 +55,11 @@
                 <option value="solid">Solid</option>
                 <option value="dotted">Dotted</option>
                 <option value="dashed">Dashed</option>
+                <option value="double">Double</option>
+                <option value="groove">Groove</option>
+                <option value="ridge">Ridge</option>
+                <option value="inset">Inset</option>
+                <option value="outset">Outset</option>
                 <option value="none">None</option>
             </select>
             </center>
@@ -62,10 +69,10 @@
             <label>Background Color:</label>
                 <br>
                 <center>
-                <input type="color" class="titlebgcolorPicker" name="titlefvcolor" value="#FBF0B2" title="Title Background Color">
-                <input type="color" class="keywordbgcolorPicker" name="keywordfvcolor" value="#D8B4F8" title="Keyword Background Color">
-                <input type="color" class="contentbgcolorPicker" name="contentfvcolor" value="#FFC7EA" title="Content Background Color">
-                <input type="color" class="summarybgcolorPicker" name="contentfvcolor" value="#CAEDFF" title="Summary Background Color">
+                <input type="color" class="titlebgcolorPicker" name="titlefvcolor" value="#ffe550" title="Title Background Color">
+                <input type="color" class="keywordbgcolorPicker" name="keywordfvcolor" value="#ae51ff" title="Keyword Background Color">
+                <input type="color" class="contentbgcolorPicker" name="contentfvcolor" value="#ff50bc" title="Content Background Color">
+                <input type="color" class="summarybgcolorPicker" name="contentfvcolor" value="#50c5ff" title="Summary Background Color">
                 </center>
             </div>
             
