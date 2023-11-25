@@ -27,9 +27,10 @@
         </header>
 
         <div class="tools">
-            <div class="SizeandBorder">
+            <div class="Size">
             <label>Paper Size:</label>
-
+            <br>
+            <center>
             <select class="paperSize" title="Paper Size">
                 <option value="Letter">Letter (8.5" x 11")</option>
                 <option value="Long">Long (8.5" x 13")</option>
@@ -41,17 +42,20 @@
                 <option value="B4JIS">B4 (JIS) (10.12" x 14.33")</option>
                 <option value="B5JIS">B5 (JIS) (7.17" x 10.12")</option>
             </select>
+            </center>
+            </div>
 
-            <br>
-            <br>
+            <div class="Border">
             <label>Border Style:</label>
+            <br>
+            <center>
             <select class="borderDesign" title="Border Style">
                 <option value="solid">Solid</option>
                 <option value="dotted">Dotted</option>
                 <option value="dashed">Dashed</option>
                 <option value="none">None</option>
             </select>
-            
+            </center>
             </div>
 
             <div class="BGColor">
@@ -65,6 +69,102 @@
                 </center>
             </div>
             
+            <div class="FSize">
+                <label>Font Size:</label>
+
+                <br>
+
+            <center>
+                <select id="titleFontSize" onchange="changeFontSize()" title="Title Font Size">
+                    <option value="12">12px</option>
+                    <option value="13">13px</option>
+                    <option value="14">14px</option>
+                    <option value="15">15px</option>
+                    <option value="16">16px</option>
+                    <option value="17">17px</option>
+                    <option value="18">18px</option>
+                    <option value="19">19px</option>
+                    <option value="20">20px</option>
+                    <option value="21">21px</option>
+                    <option value="22">22px</option>
+                    <option value="23">23px</option>
+                    <option value="24">24px</option>
+                    <option value="25">25px</option>
+                    <option value="26">26px</option>
+                    <option value="27">27px</option>
+                    <option value="28">28px</option>
+                    <option value="29">29px</option>
+                    <option value="30">30px</option>
+                </select>
+
+                <select id="keywordFontSize" onchange="changeFontSize()" title="Keyword Font Size">
+                    <option value="12">12px</option>
+                    <option value="13">13px</option>
+                    <option value="14">14px</option>
+                    <option value="15">15px</option>
+                    <option value="16">16px</option>
+                    <option value="17">17px</option>
+                    <option value="18">18px</option>
+                    <option value="19">19px</option>
+                    <option value="20">20px</option>
+                    <option value="21">21px</option>
+                    <option value="22">22px</option>
+                    <option value="23">23px</option>
+                    <option value="24">24px</option>
+                    <option value="25">25px</option>
+                    <option value="26">26px</option>
+                    <option value="27">27px</option>
+                    <option value="28">28px</option>
+                    <option value="29">29px</option>
+                    <option value="30">30px</option>
+                </select>
+
+                <select id="contentFontSize" onchange="changeFontSize()" title="Content Font Size">
+                    <option value="12">12px</option>
+                    <option value="13">13px</option>
+                    <option value="14">14px</option>
+                    <option value="15">15px</option>
+                    <option value="16">16px</option>
+                    <option value="17">17px</option>
+                    <option value="18">18px</option>
+                    <option value="19">19px</option>
+                    <option value="20">20px</option>
+                    <option value="21">21px</option>
+                    <option value="22">22px</option>
+                    <option value="23">23px</option>
+                    <option value="24">24px</option>
+                    <option value="25">25px</option>
+                    <option value="26">26px</option>
+                    <option value="27">27px</option>
+                    <option value="28">28px</option>
+                    <option value="29">29px</option>
+                    <option value="30">30px</option>
+                </select>
+
+                <select id="summaryFontSize" onchange="changeFontSize()" title="Summary Font Size">
+                    <option value="12">12px</option>
+                    <option value="13">13px</option>
+                    <option value="14">14px</option>
+                    <option value="15">15px</option>
+                    <option value="16">16px</option>
+                    <option value="17">17px</option>
+                    <option value="18">18px</option>
+                    <option value="19">19px</option>
+                    <option value="20">20px</option>
+                    <option value="21">21px</option>
+                    <option value="22">22px</option>
+                    <option value="23">23px</option>
+                    <option value="24">24px</option>
+                    <option value="25">25px</option>
+                    <option value="26">26px</option>
+                    <option value="27">27px</option>
+                    <option value="28">28px</option>
+                    <option value="29">29px</option>
+                    <option value="30">30px</option>
+                </select>
+            </div>
+
+        </center>
 
             <div class="TColor">
             <label>Text Color:</label>
@@ -118,10 +218,13 @@
         <script src="{{ url_for('static', filename='js/backgroundcolor.js') }}"></script>
         <script src="{{ url_for('static', filename='js/borderdesign.js') }}"></script>
         <script src="{{ url_for('static', filename='js/papersize.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/fontsize.js') }}"></script>
         <script src="{{ url_for('static', filename='js/textcolor.js') }}"></script>
         <script src="{{ url_for('static', filename='js/searchandhighlight.js') }}"></script>
         <script src="{{ url_for('static', filename='js/savedata.js') }}"></script>
         <script src="{{ url_for('static', filename='js/saveanddownloadImage.js') }}"></script>
+
+
     </body>
 
 </html>
