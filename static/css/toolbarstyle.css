@@ -5,6 +5,7 @@
     display: flex;
     padding: 10px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    min-width: fit-content;
 }
 
 /*TOOLSIZE*/
@@ -13,7 +14,7 @@
 .BGColor,
 .FSize,
 .TColor {
-    min-width: 18%;
+    min-width: 20%;
     height: auto;
     margin-right: 9px;
     background-color: #ffffff;
@@ -25,11 +26,9 @@
     min-width: 18%;
 }
 .Border {
-    min-width: 10%;
+    min-width: 14%;
 }
-.FSize {
-    min-width: 25%;
-}
+
 
 /*PAPERSIZE OPTION DESIGN*/
 .paperSize {
