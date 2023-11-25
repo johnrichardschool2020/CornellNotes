@@ -1,9 +1,9 @@
 function saveData() {
         //SAVE XML
-        var title = document.querySelector('.notetitle').innerText;
-        var keyword = document.querySelector('.notekeyword').innerText;
-        var content = document.querySelector('.notecontent').innerText;
-        var summary = document.querySelector('.notesummary').innerText;
+        var title = document.querySelector('.notetitle').innerHTML;
+        var keyword = document.querySelector('.notekeyword').innerHTML;
+        var content = document.querySelector('.notecontent').innerHTML;
+        var summary = document.querySelector('.notesummary').innerHTML;
 
         // Send AJAX request to Flask server
         fetch('/save', {

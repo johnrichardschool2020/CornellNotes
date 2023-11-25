@@ -111,7 +111,6 @@ label {
 .documents {
     display: grid;
     place-items: center;
-    height: 100vh;
 }
 
 /* CORNELL NOTE DOC */
@@ -123,22 +122,22 @@ label {
 }
 
 
+p {
+    font-family: 'Calibri';
+    font-size: 14px;
+}
 
 
 /* head */
-.head {
+.sectionhead {
     display: flex;
 }
 
 
 .title {
     background-color: #FBF0B2;
-    position: relative;
-    width: 100%;
-    height: 10%;
-    min-height: 100px;
     margin: 5px;
-    padding: 5px; 
+    padding: 7px; 
     border: 1px solid #d1d1d1;
     border-radius: 8px;
 
@@ -146,9 +145,9 @@ label {
 .dynamictitle {
     text-align: center;
 }
-.notetitle {
-    background-color: #ffffff;
+p.notetitle {
     text-align: center;
+    background-color: #ffffff;
     border: 1px solid #d1d1d1;
     padding: 3px;
 }
@@ -157,26 +156,23 @@ label {
 
 
 /* con */
-.con {
+.sectionmiddle {
     display: flex;
 }
 
 
 .keyword {
-    background-color: #D8B4F8;
-    position: relative;
     flex: 1;
-    height: auto;
-    min-height: 500px;
+    background-color: #D8B4F8;
     margin: 5px;
-    padding: 5px;
+    padding: 7px;
     border: 1px solid #d1d1d1;
     border-radius: 8px;
 }
 .dynamickeyword{
     text-align: center;
 }
-.notekeyword {
+p.notekeyword {
     background-color: #ffffff;
     border: 1px solid #d1d1d1;
     padding: 3px;
@@ -185,20 +181,17 @@ label {
 
 
 .content {
-    background-color: #FFC7EA;
-    position: relative;
     flex: 3;
-    height: auto;
-    min-height: 500px;
-    margin: 5px; 
-    padding: 5px; 
+    background-color: #FFC7EA;
+    margin: 5px;
+    padding: 7px; 
     border: 1px solid #d1d1d1;
     border-radius: 8px;
 }
 .dynamiccontent {
     text-align: center;
 }
-.notecontent {
+p.notecontent {
     background-color: #ffffff;
     border: 1px solid #d1d1d1;
     padding: 3px;
@@ -207,24 +200,21 @@ label {
 
 
 /* but */
-.but {
+.sectionbuttom {
     display: flex;
 }
 
 .summary {
     background-color: #CAEDFF;
-    position: relative;
-    height: 15%;
-    min-height: 250px;
     margin: 5px;
-    padding: 5px;
+    padding: 7px;
     border: 1px solid #d1d1d1; 
     border-radius: 8px;
 }
 .dynamicsummary {
     text-align: center;
 }
-.notesummary {
+p.notesummary {
     background-color: #ffffff;
     border: 1px solid #d1d1d1;
     padding: 3px;
