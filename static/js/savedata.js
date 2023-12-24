@@ -1,34 +1,40 @@
-function saveData() {
-    // Prompt the user
-    var userWantsToSave = confirm('Do you want to save data?');
-
-    if (!userWantsToSave) {
-        // User clicked "NO", do nothing
-        return;
+document.addEventListener("DOMContentLoaded", function () {
+    function saveDataToServer(data) {
+        fetch('/save_data', {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/xml'
+            },
+            body: data
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
     }
 
-    // User clicked "YES", proceed to save XML data
+    function handleSaveButtonClick() {
+        const title = document.getElementById('title').textContent;
+        const content = document.getElementById('content').textContent;
+        const keyword = document.getElementById('keyword').textContent;
+        const summary = document.getElementById('summary').textContent;
 
-    // Extract data from the HTML elements
-    var title = document.querySelector('.notetitle').innerHTML;
-    var keyword = document.querySelector('.notekeyword').innerHTML;
-    var content = document.querySelector('.notecontent').innerHTML;
-    var summary = document.querySelector('.notesummary').innerHTML;
+        const xmlData = `
+            <root>
+                <title>${title}</title>
+                <content>${content}</content>
+                <keyword>${keyword}</keyword>
+                <summary>${summary}</summary>
+            </root>
+        `;
 
-    // Send AJAX request to Flask server
-    fetch('/save', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams({
-            'title': title,
-            'keyword': keyword,
-            'content': content,
-            'summary': summary,
-        }),
-    })
-    .then(response => response.text())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
-}
+        saveDataToServer(xmlData);
+        alert('Data saved successfully!');
+        location.reload(true);
+    }
+
+    const saveButton = document.getElementById('saveButton');
+    if (saveButton) {
+        saveButton.addEventListener('click', handleSaveButtonClick);
+    }
+
+});

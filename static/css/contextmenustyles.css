@@ -1,0 +1,46 @@
+/* CSS for the custom context menu */
+.wrapper {
+    visibility: hidden;
+    position: absolute;
+    width: auto;
+    border-radius: 10px;
+    background: #fff;
+    padding: 5px;
+    border: 2px solid #4e4e4e;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+}
+
+.content ul {
+    padding: 0;
+    margin: 0;
+}
+
+.content li {
+    list-style: none;
+    font-size: 16px;
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    padding: 3px 6px;
+    color: #000000;
+}
+
+.content li:hover {
+    background-color: #5a5a5a;
+    color: rgb(255, 255, 255);
+}
+
+.content li span {
+    margin-left: 2px;
+    font-size: 16px;
+}
+
+.content .lineh {
+    display: flex;
+    margin-top: -5px;
+    padding: 3px 6px;
+    border-top: 1px solid #ccc;
+}
